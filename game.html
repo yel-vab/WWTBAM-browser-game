@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Who Wants to Be a Millionaire: The Browser Game</title>
+  </head>
+
+  <body class="body-questions-page">
+    <!-- MODAL BOXES FOR BUTTONS -->
+    <div class="modal-gohome" id="modal-gohome">
+      <div class="gohome-box">
+        <p class="copper-font">Give up and take home prize money?</p>
+      <button id="yes-gohome" class="style-button copper-font">yes</button><button id="no-gohome" class="style-button copper-font">no</button>
+      </div>
+    </div>
+
+    <div class="modal-quitgame" id="modal-quitgame">
+      <div class="quitgame-box">
+        <p class="copper-font">Quit Game?</p>
+      <button id="yes-quitgame" class="style-button copper-font">yes</button><button id="no-quitgame" class="style-button copper-font">no</button>
+      </div>
+    </div>
+    <!-- MODAL BOXES FOR BUTTONS -->
+    <div class="main-container">
+      <div class="div-1">
+        <div class="sub-div-1">
+          <div class="sub-1">
+            <!-- 
+              PLAYER NAME GOES HERE
+             -->
+             <div class="player-name-container">
+              <span class="decorationline-playername"></span>
+              <div class="player-name">
+                <p class="copper-font" id="inputed-name"></p>
+              </div>
+              <span class="player-stroke"></span>
+             </div> 
+             <!-- 
+              PLAYER NAME GOES HERE
+             -->
+            <div class="misc-features-container">
+              <div class="addtl-buttons-container">
+                <button type="button" class="circular-button style-button quit-button"></button>
+                <button type="button" class="circular-button style-button mute-button" id="mute"></button>
+              <button type="button" class="go-home style-button circular-button"></button>
+              </div>
+              <div class="timer-container timer">
+                <div class="timer-img">
+                  <h1 class='timer-number'>30</h1>
+                </div>
+              </div>
+            </div>
+            <!-- <Player's reward Display> -->
+            <div class="current-reward-container">
+              <span class="decorationline-rewardmoney"></span>
+              <div class="rewardmoney-level">
+                <p class="copper-font" id="money-level">$ 0</p>
+              </div>
+              <span class="rewardmoney-stroke"></span>
+            </div>
+            <!-- </Player' s reward Display> -->
+            <!-- Player Name, close game, mute game, money reward -->
+          </div>
+
+          <div class="sub-2">
+            <!-- Jags face, is this it pancit pop up -->
+            <div class="sub-2-inner-1">
+              <div class="img-icon-container">
+                <img
+                  class="round-icon-img"
+                  src="/assets/hosts/img-host.png"
+                />
+              </div>
+              <div class="lifeline-label-container"><img class="lifeline-label-icon" src="/assets/icons/lifeline-2-call.svg"/> <span class="lifeline-label-text"></div>
+            </div>
+            <div class="sub-2-inner-2">
+              <!-- Empty div for elements placement -->
+            </div>
+            <!-- popup component -->
+            <div class="modal-container" id="modal-container">
+              <div class="modal">
+                <h2>Is this it Pancit?</h2>
+                <div class="modal-button">
+                  <button id="yes">Yes</button>
+                  <button id="no">No</button>
+                </div>
+              </div>
+            </div>
+            <!-- /popup component -->
+          </div>
+        </div>
+
+        <div class="sub-div-2">
+          <div class="question-div">
+            <span id="question"></span>
+          </div>
+          <div class="choices-container">
+            <button class="choice-1">
+              <span class="option-stroke">
+                <span class="choice-letter">A:</span>
+                <span class="choice-a"></span>
+              </span>
+            </button>
+            <span class="option-decoration-line-1"></span>
+            <button class="choice-2">
+              <span class="option-stroke">
+                <span class="choice-letter">C:</span>
+                <span class="choice-c"></span>
+              </span>
+            </button>
+            <button class="choice-3">
+              <span class="option-stroke">
+                <span class="choice-letter">B:</span>
+                <span class="choice-b"></span>
+              </span>
+            </button>
+            <span class="option-decoration-line-2"></span>
+            <button class="choice-4">
+              <span class="option-stroke">
+                <span class="choice-letter">D:</span>
+                <span class="choice-d"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- OK DON'T CHANGE CODE BELOW THIS LINE -->
+      <div class="div-2">
+        <div class="lifelines-div">
+          <button id="callAMarvs" class="button-lifeline call-a-marvs"></button>
+          <button class="button-lifeline fifty-fifty"></button>
+          <button class="button-lifeline skip"></button>
+        </div>
+        <div class="money-board">
+          <div class="level level-15 milestone-level">
+            <div class="level-question">15</div>
+            <div class="level-reward">&#36; 1 MILLION</div>
+          </div>
+          <div class="level level-14">
+            <div class="level-question">14</div>
+            <div class="level-reward">&#36; 500,000</div>
+          </div>
+          <div class="level level-13">
+            <div class="level-question">13</div>
+            <div class="level-reward">&#36; 250,000</div>
+          </div>
+          <div class="level level-12">
+            <div class="level-question">12</div>
+            <div class="level-reward">&#36; 125,000</div>
+          </div>
+          <div class="level level-11">
+            <div class="level-question">11</div>
+            <div class="level-reward">&#36; 64,000</div>
+          </div>
+          <div class="level level-10 milestone-level">
+            <div class="level-question">10</div>
+            <div class="level-reward">&#36; 32,000</div>
+          </div>
+          <div class="level level-9">
+            <div class="level-question">9</div>
+            <div class="level-reward">&#36; 16,000</div>
+          </div>
+          <div class="level level-8">
+            <div class="level-question">8</div>
+            <div class="level-reward">&#36; 8,000</div>
+          </div>
+          <div class="level level-7">
+            <div class="level-question">7</div>
+            <div class="level-reward">&#36; 4,000</div>
+          </div>
+          <div class="level level-6">
+            <div class="level-question">6</div>
+            <div class="level-reward">&#36; 2,000</div>
+          </div>
+          <div class="level level-5 milestone-level">
+            <div class="level-question">5</div>
+            <div class="level-reward">&#36; 1,000</div>
+          </div>
+          <div class="level level-4">
+            <div class="level-question">4</div>
+            <div class="level-reward">&#36; 500</div>
+          </div>
+          <div class="level level-3">
+            <div class="level-question">3</div>
+            <div class="level-reward">&#36; 300</div>
+          </div>
+          <div class="level level-2">
+            <div class="level-question">2</div>
+            <div class="level-reward">&#36; 200</div>
+          </div>
+          <div class="level level-1">
+            <div class="level-question">1</div>
+            <div class="level-reward">&#36; 100</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Background Music -->
+    <audio
+      id="bgm"
+      src="assets/sounds/questionsbgm.mp3"
+      preload="auto"
+      loop
+    ></audio>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Who Wants to Be a Millionaire: The Browser Game</title>
+  </head>
+  <body class="body-start-page">
+    <div class="splash-screen">
+      <img
+        src="assets/logo/logo-1-backdrop.svg"
+        alt="logo"
+        class="logo-backdrop"
+      />
+      <img
+        src="assets/logo/logo-3-millionaire.svg"
+        alt="logo"
+        class="logo-maintitle"
+      />
+    </div>
+    <button type="button" onclick="window.location.href='player-name.html'" id="start-button" class="copper-font style-button">START</button>
+
+    <audio id="bgm" src="assets/sounds/maintheme.mp3" preload="auto" loop></audio> 
+
+    <script src="app.js"></script>
+  </body>
+</html>

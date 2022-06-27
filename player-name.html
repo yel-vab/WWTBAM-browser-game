@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who Wants to Be a Millionaire: The Browser Game</title>
+</head>
+<body class="body-input-page">
+    <div class="page2-body copper-font">
+        <h1>WHO WANTS TO BE A MILLIONAIRE?</h1>
+        <form action="game.html" method="GET">
+            <input type="text" id="input-name" name="playerName" placeholder="INPUT YOUR NAME" maxlength="8"/><br>
+            <button type="submit" class="play-button copper-font style-button" id="submit" onclick="retrieveName()">PLAY</button>
+        </form>
+    </div>
+    <div class="icon">
+        <button type="button" class="circular-button style-button mute-button" id="mute"></button>
+        <button type="button" class="circular-button style-button quit-button" onclick="window.location.href='index.html'"></button>
+    </div>
+
+    <audio id="bgm" src="assets/sounds/maintheme.mp3" preload="auto" loop></audio>
+
+    <script src="app.js"></script>
+</body>
+</html>

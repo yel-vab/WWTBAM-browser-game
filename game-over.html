@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Who Wants to Be a Millionaire: The Browser Game</title>
+  </head>
+  <body class="body-game-won-page">
+    <div class="page4-body">
+      <div class="logo-container">
+      </div>
+      <h1 id="game-over">GAME OVER</h1>
+      <div class="multilayer-div">
+        <div class="winner-name"> 
+          <p class="copper-font" id="playername-done">Player</p>
+          </div>
+          <div class="millionaire" id="money-for-nothing"></div>
+      </div>
+
+      <button
+        type="button"
+        class="play-again-button style-button"
+        onclick="window.location.href='player-name.html'"
+      >
+        PLAY AGAIN
+      </button>
+      <div class="button-container">
+        <div class="page-4-icon">
+            <button type="button" class="circular-button style-button mute-button" id="mute"></button>
+            <button type="button" class="circular-button style-button quit-button" onclick="window.location.href='index.html'"></button>
+        </div>
+      </div>
+    </div>
+
+    <audio id="bgm" src="assets/sounds/gameover.mp3" preload="auto"></audio> 
+    <script src="app.js"></script>
+  </body>
+</html>
